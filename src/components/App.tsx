@@ -21,21 +21,21 @@ interface ArticlesHttpResponse {
 }
 
 export default function App() {
-  const handleClick = () => {
-    console.log("I'm a button!");
-  };
-  const handleClick2 = (event: React.MouseEvent<HTMLButtonElement>) => {
-    console.log(event.target);
-  };
-  const [clicks, setClicks] = useState(0);
-  const handleClick3 = () => {
-    setClicks(clicks + 1);
-    console.log(clicks);
-  };
+  // const handleClick = () => {
+  //   console.log("I'm a button!");
+  // };
+  // const handleClick2 = (event: React.MouseEvent<HTMLButtonElement>) => {
+  //   console.log(event.target);
+  // };
+  // const [clicks, setClicks] = useState(0);
+  // const handleClick3 = () => {
+  //   setClicks(clicks + 1);
+  //   console.log(clicks);
+  // };
 
-  const handleOrder = (data: string) => {
-    console.log("Order received from: ", data);
-  };
+  // const handleOrder = (data: string) => {
+  //   console.log("Order received from: ", data);
+  // };
   //-----SerchForm-------
   const [articles, setArticles] = useState<Article[]>([]);
 
@@ -61,9 +61,7 @@ export default function App() {
 
   return (
     <>
-      <div>
-        <DelForm />
-      </div>
+      <div>{/* <DelForm /> */}</div>
       <div>
         <SearchForm onSubmit={handleSearch} />
         {isLoading && <p>Loading data, please wait...</p>}
@@ -71,22 +69,20 @@ export default function App() {
         {articles.length > 0 && <ArticleList hits={articles} />}
       </div>
       <div>
-        <h2>Place your order</h2>
-        <OrderForm onSubmit={handleOrder} />
+        {/* <h2>Place your order</h2>
+        <OrderForm onSubmit={handleOrder} /> */}
+      </div>
+      <div>{/* <FormDataFnc /> */}</div>
+      <div>
+        {/* <ClickCounterA value={clicks} onUpdate={handleClick3} />
+        <ClickCounterA value={clicks} onUpdate={handleClick3} /> */}
       </div>
       <div>
-        <FormDataFnc />
+        {/* <ClickCounter />
+        <ClickCounter /> */}
       </div>
-      <div>
-        <ClickCounterA value={clicks} onUpdate={handleClick3} />
-        <ClickCounterA value={clicks} onUpdate={handleClick3} />
-      </div>
-      <div>
-        <ClickCounter />
-        <ClickCounter />
-      </div>
-      <XchangeY />
-      <UserMenu name="Kolotoon" />
+      {/* <XchangeY /> */}
+      {/* <UserMenu name="Kolotoon" />
       <button onClick={handleClick}>Click me!</button>
       <button onClick={handleClick2}>First button</button>
       <button
@@ -119,7 +115,7 @@ export default function App() {
       />
       <Bookcais />
       <Button variant="primary" text="Login" />
-      <Button variant="secondary" text="Folow" />
+      <Button variant="secondary" text="Folow" /> */}
     </>
   );
 }
